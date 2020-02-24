@@ -60,7 +60,6 @@ public class RicksyBusiness {
 		for (String ovni : ufosID) {
 			ufosPark.add(ovni);
         }
-		System.out.println("Hola");
         // Procesamos el pago y reserva de ovni de Abradolph
         ufosPark.dispatch(abradolph);
 

@@ -7,18 +7,27 @@ import java.util.Map;
 public class UfosPark{
 	// Añado los atributos de la clase y sus valores iniciales
 	public double fee = 500;
-	public HashMap<Ufos, Ufos> flota = new HashMap<Ufos, Ufos>();
+	public HashMap<String, String> flota = new HashMap<String, String>();
 	private String[] ufosID = new String[2];
 	// Creo el constructor de la clase
-	public UfosPark() {
-		this.fee = fee;
-		this.flota = flota;
-		this.ufosID = ufosID;
+	UfosPark ufosPark = new UfosPark();
+	
+	public double getFee() {
+		return this.fee;
+	}
+	
+	public HashMap<String, String> getFlota() {
+		return this.flota;
+	}
+	
+	public String[] getUfosID() {
+		return this.ufosID;
 	}
 	// Creo el método para añadir los ovnis, que los obtiene de la clase Ufos
-	public void add(String Ufos) {
-		for (Map.Entry<Ufos, Ufos> entry : flota.entrySet()) {
-			System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+	public void add(String ovni) {
+		for (Map.Entry<String, String> flota : flota.entrySet()) {
+			if (flota == null)
+				ufosPark.add(ovni);
 		}
 	}
 
